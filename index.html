@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Julien Peeters</title>
+   </head>
+   <style media="screen">
+   /* universal stuff */
+   html{
+      width: 100%;
+      height: 100%;
+   }
+   body{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background: url(background.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: bahnschrift;
+      scroll-behavior: smooth;
+      transition: ease-in-out 0.2s;
+      display: grid;
+      grid-template-columns: 1fr auto;
+   }
+   h1{
+      filter: drop-shadow(0 0 15px rgba(0, 0, 0, 1));
+   }
+   input[type=checkbox]{
+      position: absolute;
+      margin: -9999px;
+   }
+   /* content stuff */
+   #content-box{
+      width: auto;
+      height: 100%;
+      overflow: hidden;
+      transition: ease-in-out 0.2s;
+      background: url(background-blurred.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+   }
+   #content-box div{
+      height: 100%;
+      transition: ease-in-out 0.2s;
+      display: none;
+   }
+   #gallery{
+      height: auto;
+      box-sizing: border-box;
+      transition: ease-in-out 0.2s;
+      overflow: auto;
+   }
+   #gallery div{
+      column-count: auto;
+      column-width: 350px;
+      column-gap: 0px;
+   }
+   #gallery div img{
+      width: 350px;
+      border-radius: 5px;
+      margin: 0;
+   }
+   #contact{
+      width: auto;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      grid-template-rows: 1fr auto 1fr;
+      background: url(background-blurred.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      transition: ease-in-out 0.2s;
+   }
+   #contact p{
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      grid-column: 2/3;
+      grid-row: 2/3;
+   }
+   #aboutme{
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      grid-template-rows: 1fr auto 1fr;
+      background: url(background-blurred.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      transition: ease-in-out 0.2s;
+   }
+   #aboutme p{
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      grid-column: 2/3;
+      grid-row: 2/3;
+   }
+   #backlabel{
+      display: none;
+   }
+   /* home stuff */
+   .pfp{
+      background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url(background-blurred.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+   }
+   .home{
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      grid-template-rows: 1fr auto 1fr;
+   }
+   .homeoptions{
+      height: 30px;
+      width: 150px;
+      border-radius: 15px;
+      background: url(background-blurred.jpg);
+      background-size: inherit;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 2.5px auto;
+      text-align: center;
+      font-size: 26px;
+      filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.2));
+      transition: ease-in-out 0.2s;
+   }
+   .homeoptions:hover{
+      transform: scale(1.05); }
+   </style>
+   <body>
+      <div class="home">
+         <div style="grid-column: 2/3; grid-row: 2/3;display: grid; grid-template-rows: auto auto auto auto auto;">
+            <img class="pfp" src="website_icon.svg" alt="Logo">
+            <h1 style="text-shadow: 0 0 1px white;">Julien Peeters</h1>
+            <label class="homeoptions" for="gallerybutton">Gallery</label>
+            <label class="homeoptions" for="contactbutton">Contact</label>
+            <label class="homeoptions" for="aboutmebutton">About me</label>
+            <label class="homeoptions" id="backlabel" for="backbutton">BACK</label>
+         </div>
+      </div>
+      <div id="content-box">
+         <div id="gallery">
+            <div style="margin: 0; height: auto; display: block;">
+               <img src="gallery-images/Astro_head_Tangent-shading.png" alt="">
+               <img src="gallery-images/falling.gif" alt="">
+               <img src="gallery-images/overlord.jpg" alt="">
+               <img src="gallery-images/PROGRESS.png" alt="">
+               <img src="gallery-images/shrug_astro.png" alt="">
+               <img src="gallery-images/SKETCH.jpg" alt="">
+               <img src="gallery-images/sketch2.jpg" alt="">
+               <img src="gallery-images/sketch3.jpg" alt="">
+               <img src="gallery-images/test_render.png" alt="">
+               <img src="gallery-images/untitled.png" alt="">
+               <img src="gallery-images/week1robotorganichead.png" alt="">
+            </div>
+         </div>
+         <div id="contact">
+            <p>E-mail: julienpeeters.personal@gmail.com<br><br>
+            Personal number: +32 470 67 77 87</p>
+         </div>
+         <div id="aboutme">
+            <p>Hi,<br><br>I've been using Blender 3D for about 5 and a half years, having gotten proficient with its modeling, <br>rendering and simulation tools.<br>
+            In that time (and before that) I've also learned how do design websites (like the one you're seeing right now)<br> using html, css and a bit of javascript.<br>
+            I also can do graphic design, like making the cover of a book, designing logo's, etc. <br>In the past 1 and a half years, I've also learned CAD design <br>in Fusion 360 which allows me to design products aswell (all be it nothing mechanical).</p>
+         </div>
+      </div>
+      <input type="checkbox" id="gallerybutton" onclick="gallerytoggle()"> <input type="checkbox" id="contactbutton" onclick="contacttoggle()">
+      <input type="checkbox" id="aboutmebutton" onclick="aboutmetoggle()"> <input type="checkbox" id="backbutton" onclick="backtoggle()">
+   </body>
+   <script type="text/javascript">
+      gallerycheck = getElementById('gallerybutton');
+      contactcheck = getElementById('contactbutton');
+      aboutmecheck = getElementById('aboutmebutton');
+      function gallerytoggle(gallerycheck){
+         if (true) {
+            widenview();
+            document.getElementById('gallery').style.display = "block";
+            document.getElementById('gallery').style.margin = "0 auto 0 auto";
+            document.getElementById('gallery').style.width = "1060px";
+            document.getElementById('contact').style.display = "none";
+            document.getElementById('aboutme').style.display = "none";
+            document.getElementById('backlabel').style.display = "block";
+         } else {
+            document.getElementById('gallery').style.display = "none";
+         }
+      }
+      function contacttoggle(contactcheck){
+         if (true) {
+            widenview();
+            document.getElementById('contact').style.display = "grid";
+            document.getElementById('contact').style.margin = "0 auto 0 auto";
+            document.getElementById('contact').style.width = "auto";
+            document.getElementById('gallery').style.display = "none";
+            document.getElementById('aboutme').style.display = "none";
+            document.getElementById('backlabel').style.display = "block";
+         } else {
+            document.getElementById('contact').style.display = "none";
+         }
+      }
+      function aboutmetoggle(aboutmecheck){
+         if (true) {
+            widenview();
+            document.getElementById('aboutme').style.display = "grid";
+            document.getElementById('aboutme').style.margin = "0 auto 0 auto";
+            document.getElementById('aboutme').style.width = "auto";
+            document.getElementById('gallery').style.display = "none";
+            document.getElementById('contact').style.display = "none";
+            document.getElementById('backlabel').style.display = "block";
+         } else {
+            document.getElementById('aboutme').style.display = "none";
+         }
+      }
+      function backtoggle(){
+         narrowview();
+         document.getElementById('backlabel').style.display = "none";
+         document.getElementById('contact').style.display = "none";
+         document.getElementById('aboutme').style.display = "none";
+         document.getElementById('gallery').style.display = "none";
+      }
+      function widenview(){
+         document.body.style.gridTemplateColumns = "400px 1fr"
+      }
+      function narrowview(){
+         document.body.style.gridTemplateColumns = "1fr auto"
+      }
+   </script>
+</html>
